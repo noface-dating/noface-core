@@ -65,7 +65,7 @@ jobs:
 
       - name: testing ipv6 for command
         run: |
-          curl -m 9 --ipv6 --verbose https://google.com
+          ip -6 addr
 
       # Upload to server
       - name: Upload Docker image to server
