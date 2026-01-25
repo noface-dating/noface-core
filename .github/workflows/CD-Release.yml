@@ -71,10 +71,11 @@ jobs:
       - name: Upload Docker image to server
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.SERVER_HOST }}
+          host: "${{ secrets.SERVER_HOST }}"
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           protocol: 'tcp6'
+          port: '22'
           source: "duri-core-image.tar"
           target: "/home/ubuntu/duri-core/"
 
