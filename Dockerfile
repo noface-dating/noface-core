@@ -12,7 +12,6 @@ EXPOSE 8080
 
 # 실행
 ENTRYPOINT ["java",
- "-XX:+UseContainerSupport",
  "-XX:MaxRAMPercentage=75.0",
  "-jar",
  "app.jar"]
