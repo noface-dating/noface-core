@@ -72,6 +72,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "duri-core-image.tar"
           target: "/home/ubuntu/duri-core/"
+          args: "-6"
 
       # Run Container
       - name: Run Docker container on server
