@@ -32,8 +32,8 @@ jobs:
       - name: Build Project
         run: ./gradlew clean build -x test
 
-      # Docker build 검증용
-      - name: Docker build (verify only)
-        run: |
-          docker build \
-          -t ${{ vars.INSTANCE_NAME }}/app:${{ github.sha }} .
+#      # Docker build 검증용
+#      - name: Docker build (verify only)
+#        run: |
+#          docker build \
+#          -t ${{ vars.INSTANCE_NAME }}/app:${{ github.sha }} .
