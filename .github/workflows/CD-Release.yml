@@ -56,12 +56,12 @@ jobs:
       # Docker build
       - name: Build Docker image
         run: |
-          docker build -t duri-core/app:${{ github.ref_name }} .
+          docker build -t ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }} .
 
       # Docker image -> tar
       - name: Save Docker image
         run: |
-          docker save duri-core/app:${{ github.ref_name }} > duri-core-image.tar
+          docker save ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }} > ${{ vars.INSTANCE_NAME }}-image.tar
 
       # Install Cloudflared
       - name: Install Cloudflared
@@ -80,8 +80,8 @@ jobs:
               -o ProxyCommand="cloudflared access ssh --hostname %h" \
               -o StrictHostKeyChecking=no \
               -o UserKnownHostsFile=/dev/null \
-              duri-core-image.tar \
-              ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/ubuntu/duri-core/
+              ${{ vars.INSTANCE_NAME }}-image.tar \
+              ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/ubuntu/${{ vars.INSTANCE_NAME }}/
 
       # Run Container
       - name: Run Docker container on server via Cloudflare Tunnel
@@ -96,16 +96,16 @@ jobs:
           ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
           
           set -e
-          cd /home/ubuntu/duri-core
+          cd /home/ubuntu/${{ vars.INSTANCE_NAME }}
           
-          sudo docker load -i duri-core-image.tar
+          sudo docker load -i ${{ vars.INSTANCE_NAME }}-image.tar
           
-          sudo docker stop duri-core || true
-          sudo docker rm duri-core || true
+          sudo docker stop ${{ vars.INSTANCE_NAME }} || true
+          sudo docker rm ${{ vars.INSTANCE_NAME }} || true
           
           sudo docker run -d \
             --restart unless-stopped \
-            --name duri-core \
+            --name ${{ vars.INSTANCE_NAME }} \
             -p 8080:8080 \
-            duri-core/app:${{ github.ref_name }}
+            ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }}
           EOF
