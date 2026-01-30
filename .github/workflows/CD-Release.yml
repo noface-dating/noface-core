@@ -107,5 +107,6 @@ jobs:
             --restart unless-stopped \
             --name ${{ vars.INSTANCE_NAME }} \
             -p ${{ secrets.INSTANCE_PORT }}:${{ secrets.INSTANCE_PORT }} \
+            -v /home/ubuntu/CA/duri-server.p12:/app/duri-server.p12:ro \
             ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }}
           EOF
