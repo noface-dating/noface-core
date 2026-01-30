@@ -5,5 +5,5 @@ WORKDIR /app
 
 COPY build/libs/*.jar app.jar
 
-# 실행
+# EXECUTE
 ENTRYPOINT ["java", "-XX:+UseContainerSupport", "-XX:MaxRAMPercentage=75.0", "-jar", "app.jar"]
