@@ -106,6 +106,6 @@ jobs:
           sudo docker run -d \
             --restart unless-stopped \
             --name ${{ vars.INSTANCE_NAME }} \
-            -p 8080:8080 \
+            -p ${{ secrets.INSTANCE_PORT }}:${{ secrets.INSTANCE_PORT }} \
             ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }}
           EOF

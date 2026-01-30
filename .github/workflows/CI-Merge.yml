@@ -36,4 +36,4 @@ jobs:
       - name: Docker build (verify only)
         run: |
           docker build \
-          -t duri-core/app:${{ github.sha }} .
+          -t ${{ vars.INSTANCE_NAME }}/app:${{ github.sha }} .
