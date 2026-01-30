@@ -89,8 +89,12 @@ jobs:
           echo "${{ secrets.SERVER_SSH_KEY }}" > duri-server.pem
           chmod 600 duri-server.pem
           
-          ssh -i duri-server.pem -o ProxyCommand="cloudflared access ssh --hostname %h" \
+          ssh -i duri-server.pem \
+          -o ProxyCommand="cloudflared access ssh --hostname %h" \
+          -o StrictHostKeyChecking=no \
+          -o UserKnownHostsFile=/dev/null \
           ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+          
           set -e
           cd /home/ubuntu/duri-core
           
@@ -104,3 +108,4 @@ jobs:
             --name duri-core \
             -p 8080:8080 \
             duri-core/app:${{ github.ref_name }}
+          EOF
