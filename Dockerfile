@@ -8,15 +8,4 @@ COPY build/libs/*.jar app.jar
 COPY /home/ubuntu/CA/duri-server.p12 duri-server.p12
 
 # EXECUTE
-ENTRYPOINT [
-    "java",
-    "-XX:+UseContainerSupport",
-    "-XX:MaxRAMPercentage=75.0",
-    "-jar",
-    "-Dserver.port=8070",
-    "-Dserver.ssl.key-store=/app/duri-server.p12",
-    "-Dserver.ssl.key-store-password=Duriduri!",
-    "-Dserver.ssl.key-store-type=PKCS12",
-    "-Dserver.ssl.key-alias=duri",
-    "app.jar"
-]
+ENTRYPOINT ["java","-XX:+UseContainerSupport","-XX:MaxRAMPercentage=75.0","-jar","-Dserver.port=8070","-Dserver.ssl.key-store=/app/duri-server.p12","-Dserver.ssl.key-store-password=Duriduri!","-Dserver.ssl.key-store-type=PKCS12","-Dserver.ssl.key-alias=duri","app.jar"]
