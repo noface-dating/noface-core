@@ -57,7 +57,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t duri-core/app:${{ github.ref_name }} .
-          
+
       # Docker image -> tar
       - name: Save Docker image
         run: |
