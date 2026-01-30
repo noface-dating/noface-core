@@ -78,6 +78,8 @@ jobs:
           
           scp -i duri-server.pem \
               -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              -o StrictHostKeyChecking=no \
+              -o UserKnownHostsFile=/dev/null \
               duri-core-image.tar \
               ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/ubuntu/duri-core/
 
