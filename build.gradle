@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.duri'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.0-beta'
 description = 'duri-core'
 
 java {
@@ -29,9 +29,24 @@ ext {
 }
 
 dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    // WebSocket
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    // Cassandra
+    implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+
+    // AWS Keyspace IAM Auth
+    implementation 'software.aws.mcs:aws-sigv4-auth-cassandra-java-driver-plugin:4.0.9'
+
+    // RabbitMQ
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-restclient'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
