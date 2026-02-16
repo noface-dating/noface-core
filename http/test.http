@@ -1,0 +1,9 @@
+
+### 채팅방만들기
+POST localhost:8070/api/v1/chat-room
+Content-Type: application/json
+
+{
+  "roomType": "DM",
+  "userIds": [1]
+}
