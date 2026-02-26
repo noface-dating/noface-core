@@ -81,7 +81,7 @@ jobs:
               -o StrictHostKeyChecking=no \
               -o UserKnownHostsFile=/dev/null \
               ${{ vars.INSTANCE_NAME }}-image.tar \
-              ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/ubuntu/${{ vars.INSTANCE_NAME }}/
+              ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/${{ secrets.SERVER_USER }}/${{ vars.INSTANCE_NAME }}/
 
       # Run Container
       - name: Run Docker container on server via Cloudflare Tunnel
@@ -107,6 +107,6 @@ jobs:
             --restart unless-stopped \
             --name ${{ vars.INSTANCE_NAME }} \
             -p ${{ secrets.INSTANCE_PORT }}:${{ secrets.INSTANCE_PORT }} \
-            -v /home/ubuntu/CA/duri-server.p12:/app/duri-server.p12:ro \
+            -v /home/${{ secrets.SERVER_USER }}/CA/duri-server.p12:/app/duri-server.p12:ro \
             ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }}
           EOF
