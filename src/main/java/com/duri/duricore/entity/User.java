@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,10 +30,10 @@ public class User {
     @Column(name = "username", nullable = false, unique = true, length = 100)
     private String username;
 
-    @Column(name = "password", nullable = false, length = 100)
+    @Column(name = "password", nullable = false, length = 255)
     private String password;
 
-    @Column(name = "email", nullable = false, length = 50)
+    @Column(name = "email", nullable = false, length = 100)
     private String email;
 
     @Column(name = "platform_type", nullable = false, length = 20)
@@ -41,4 +41,7 @@ public class User {
 
     @Column(name = "last_login_at")
     private LocalDateTime lastLoginAt;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private LocalDateTime createdAt;
 }

@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 
 @Entity
@@ -23,7 +24,7 @@ public class Profile {
     private Long profileId;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, unique = true)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "nickname", nullable = false, length = 50)
@@ -35,19 +36,20 @@ public class Profile {
     @Column(name = "gender", nullable = false)
     private Boolean gender;
 
-    @Column(name = "region", length = 50)
+    @Column(name = "region", nullable = false, length = 50)
     private String region;
 
     @Column(name = "hobbies", columnDefinition = "JSON")
     @Convert(converter = JsonMapConverter.class)
     private Map<String, Object> hobbies;
 
-    @Column(name = "face_features", length = 10)
-    private String faceFeatures;
-
-    @Column(name = "face_preference", columnDefinition = "JSON")
+    @Column(name = "face_features", nullable = false, length = 10, columnDefinition = "CHAR(10)")
     @Convert(converter = FacePreferenceConverter.class)
-    private Map<String, Map<String, Integer>> facePreference;
+    private List<Integer> faceFeatures;
+
+    @Column(name = "face_preference", nullable = false, length = 10, columnDefinition = "CHAR(10)")
+    @Convert(converter = FacePreferenceConverter.class)
+    private List<Integer> facePreference;
 
     @Column(name = "additional_information", columnDefinition = "JSON")
     @Convert(converter = JsonMapConverter.class)
