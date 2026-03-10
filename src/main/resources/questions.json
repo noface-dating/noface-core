@@ -1,0 +1,322 @@
+[
+  {
+    "gender": "FEMALE",
+    "questionId": "q1",
+    "questionText": "강아지 vs 고양이",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c1-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q1/c1-1.jpg"
+      },
+      {
+        "choiceId": "c1-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q1/c1-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q2",
+    "questionText": "두부상 vs 아랍상",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c2-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q2/c2-1.jpg"
+      },
+      {
+        "choiceId": "c2-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q2/c2-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q3",
+    "questionText": "너드남 vs 양아치남",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c3-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q3/c3-1.jpg"
+      },
+      {
+        "choiceId": "c3-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q3/c3-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q4",
+    "questionText": "쌍커풀 O vs X",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c4-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q4/c4-1.jpg"
+      },
+      {
+        "choiceId": "c4-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q4/c4-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q5",
+    "questionText": "밝은 피부 vs 어두운 피부",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c5-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q5/c5-1.jpg"
+      },
+      {
+        "choiceId": "c5-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q5/c5-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q6",
+    "questionText": "덮머 vs 깐머",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c6-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q6/c6-1.jpg"
+      },
+      {
+        "choiceId": "c6-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q6/c6-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q7",
+    "questionText": "안경 vs 무안경",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c7-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q7/c7-1.jpg"
+      },
+      {
+        "choiceId": "c7-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q7/c7-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q8",
+    "questionText": "V라인 턱 vs 각진 턱",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c8-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q8/c8-1.jpg"
+      },
+      {
+        "choiceId": "c8-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q8/c8-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q9",
+    "questionText": "긴머리 vs 짧은머리",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c9-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q9/c9-1.jpg"
+      },
+      {
+        "choiceId": "c9-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q9/c9-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "FEMALE",
+    "questionId": "q10",
+    "questionText": "두꺼운 입술 vs 얇은 입술",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c10-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q10/c10-1.jpg"
+      },
+      {
+        "choiceId": "c10-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/female/q10/c10-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q1",
+    "questionText": "강아지 vs 고양이",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c1-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q1/c1-1.jpg"
+      },
+      {
+        "choiceId": "c1-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q1/c1-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q2",
+    "questionText": "장발 vs 단발",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c2-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q2/c2-1.jpg"
+      },
+      {
+        "choiceId": "c2-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q2/c2-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q3",
+    "questionText": "청순 vs 섹시",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c3-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q3/c3-1.jpg"
+      },
+      {
+        "choiceId": "c3-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q3/c3-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q4",
+    "questionText": "청순 vs 큐티",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c4-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q4/c4-1.jpg"
+      },
+      {
+        "choiceId": "c4-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q4/c4-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q5",
+    "questionText": "섹시 vs 큐티",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c5-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q5/c5-1.jpg"
+      },
+      {
+        "choiceId": "c5-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q5/c5-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q6",
+    "questionText": "밝은 피부 vs 어두운 피부",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c6-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q6/c6-1.jpg"
+      },
+      {
+        "choiceId": "c6-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q6/c6-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q7",
+    "questionText": "안경 vs 무안경",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c7-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q7/c7-1.jpg"
+      },
+      {
+        "choiceId": "c7-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q7/c7-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q8",
+    "questionText": "쌍커풀 O vs X",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c8-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q8/c8-1.jpg"
+      },
+      {
+        "choiceId": "c8-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q8/c8-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q9",
+    "questionText": "앞머리 O vs X",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c9-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q9/c9-1.jpg"
+      },
+      {
+        "choiceId": "c9-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q9/c9-2.jpg"
+      }
+    ]
+  },
+  {
+    "gender": "MALE",
+    "questionId": "q10",
+    "questionText": "두꺼운 입술 vs 얇은 입술",
+    "timeLimit": 5,
+    "choices": [
+      {
+        "choiceId": "c10-1",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q10/c10-1.jpg"
+      },
+      {
+        "choiceId": "c10-2",
+        "imageUrl": "https://storage.googleapis.com/duri-bucket/face-preference/male/q10/c10-2.jpg"
+      }
+    ]
+  }
+]
