@@ -1,0 +1,113 @@
+### 변수 (실행 전 수정 가능)
+@baseUrl = http://localhost:8080
+@userId = 1
+
+###############################################################################
+# 취향 이지선다 (Face Preference) API
+###############################################################################
+
+### 1. 질문 목록 조회 - 여성용 (남성 얼굴 취향 선택)
+GET {{baseUrl}}/api/onboarding/face-preference/questions?gender=FEMALE
+
+###
+
+### 2. 질문 목록 조회 - 남성용 (여성 얼굴 취향 선택)
+GET {{baseUrl}}/api/onboarding/face-preference/questions?gender=MALE
+
+###
+
+### 3. 질문 목록 - gender 누락 (400 예상)
+GET {{baseUrl}}/api/onboarding/face-preference/questions
+
+###
+
+### 4. 답변 제출 (10문항 이지선다: 앞 5개 첫 번째 선택, 뒤 5개 두 번째 선택 → [0,0,0,0,0,1,1,1,1,1])
+POST {{baseUrl}}/api/onboarding/face-preference/answers
+Content-Type: application/json
+
+{
+  "userId": {{userId}},
+  "answers": [
+    { "questionId": "q1",  "choiceId": "c1-1",  "isTimeout": false },
+    { "questionId": "q2",  "choiceId": "c2-1",  "isTimeout": false },
+    { "questionId": "q3",  "choiceId": "c3-1",  "isTimeout": false },
+    { "questionId": "q4",  "choiceId": "c4-1",  "isTimeout": false },
+    { "questionId": "q5",  "choiceId": "c5-1",  "isTimeout": false },
+    { "questionId": "q6",  "choiceId": "c6-2",  "isTimeout": false },
+    { "questionId": "q7",  "choiceId": "c7-2",  "isTimeout": false },
+    { "questionId": "q8",  "choiceId": "c8-2",  "isTimeout": false },
+    { "questionId": "q9",  "choiceId": "c9-2",  "isTimeout": false },
+    { "questionId": "q10", "choiceId": "c10-2", "isTimeout": false }
+  ]
+}
+
+###
+
+### 5. 답변 제출 - 전부 두 번째 선택 (결과: [1,1,1,1,1,1,1,1,1,1])
+POST {{baseUrl}}/api/onboarding/face-preference/answers
+Content-Type: application/json
+
+{
+  "userId": {{userId}},
+  "answers": [
+    { "questionId": "q1",  "choiceId": "c1-2",  "isTimeout": false },
+    { "questionId": "q2",  "choiceId": "c2-2",  "isTimeout": false },
+    { "questionId": "q3",  "choiceId": "c3-2",  "isTimeout": false },
+    { "questionId": "q4",  "choiceId": "c4-2",  "isTimeout": false },
+    { "questionId": "q5",  "choiceId": "c5-2",  "isTimeout": false },
+    { "questionId": "q6",  "choiceId": "c6-2",  "isTimeout": false },
+    { "questionId": "q7",  "choiceId": "c7-2",  "isTimeout": false },
+    { "questionId": "q8",  "choiceId": "c8-2",  "isTimeout": false },
+    { "questionId": "q9",  "choiceId": "c9-2",  "isTimeout": false },
+    { "questionId": "q10", "choiceId": "c10-2", "isTimeout": false }
+  ]
+}
+
+###
+
+### 6. 취향 결과 조회
+GET {{baseUrl}}/api/onboarding/face-preference/result?userId={{userId}}
+
+###
+
+### 7. 취향 결과 - 존재하지 않는 userId (404 예상)
+GET {{baseUrl}}/api/onboarding/face-preference/result?userId=99999
+
+###
+
+###############################################################################
+# 스토리지 (Storage) API - 이미지 URL 확인 / 업로드 테스트
+###############################################################################
+
+### 8. 얼굴 취향 이미지 URL 조회 (여성용 q1, 첫 번째 선택지)
+GET {{baseUrl}}/api/storage/url/face-preference?gender=FEMALE&questionId=q1&choiceId=c1-1
+
+###
+
+### 9. 얼굴 취향 이미지 URL 조회 (남성용 q1)
+GET {{baseUrl}}/api/storage/url/face-preference?gender=MALE&questionId=q1&choiceId=c1-1
+
+###
+
+### 10. 이미지 업로드 (multipart) - 실제 파일 경로로 바꿔서 사용
+# POST {{baseUrl}}/api/storage/upload/face-preference
+# Content-Type: multipart/form-data; boundary=WebAppBoundary
+#
+# --WebAppBoundary
+# Content-Disposition: form-data; name="file"; filename="c1-1.jpg"
+# Content-Type: image/jpeg
+#
+# < ./c1-1.jpg
+# --WebAppBoundary
+# Content-Disposition: form-data; name="gender"
+#
+# FEMALE
+# --WebAppBoundary
+# Content-Disposition: form-data; name="questionId"
+#
+# q1
+# --WebAppBoundary
+# Content-Disposition: form-data; name="choiceId"
+#
+# c1-1
+# --WebAppBoundary--
