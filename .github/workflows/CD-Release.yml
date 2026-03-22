@@ -122,5 +122,6 @@ jobs:
             -e EUREKA_USERNAME=${{ secrets.EUREKA_USERNAME }} \
             -e EUREKA_PASSWORD=${{ secrets.EUREKA_PASSWORD }} \
             -e EUREKA_DEFAULT_ZONE=${{ secrets.EUREKA_DEFAULT_ZONE }} \
+            -e ACTIVE_PROFILE=${{ secrets.ACTIVE_PROFILE }} \
             ${{ vars.INSTANCE_NAME }}/app:${{ github.ref_name }}
           EOF
