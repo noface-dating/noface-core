@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  *
  * @author 김연우
  */
-@RestControllerAdvice
+@RestControllerAdvice("globalExceptionHandlerV1")
 public class GlobalExceptionHandler {
 }
