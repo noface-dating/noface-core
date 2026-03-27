@@ -41,6 +41,9 @@ dependencies {
     // Cassandra
     implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
 
+    // R2 & S3
+    implementation 'software.amazon.awssdk:s3:2.20.120'
+
     // AWS Keyspace IAM Auth
     implementation 'software.aws.mcs:aws-sigv4-auth-cassandra-java-driver-plugin:4.0.9'
 
